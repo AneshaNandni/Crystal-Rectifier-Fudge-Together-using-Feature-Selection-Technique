@@ -3,11 +3,11 @@ import pandas as pd
 
 # importing dataset
 # create matrix of independent variables(features)
-data_X = pd.read_csv('secom.data.txt', sep = ' ')
+data_X = pd.read_csv('\C:secom.data.txt')
 X = data_X.values
 
 #create dependent variable vector
-data_y = pd.read_csv('secom_labels.data.txt', sep = ' ')
+data_y = pd.read_csv('\C:secom_labels.data.txt')
 y = data_y.iloc[:, 0].values
 
 # handling missing data
@@ -42,7 +42,7 @@ X_lsvc.shape
 
 #splitting the dataset into Training set and Test set
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X_lsvc, y, test_size = 0.2, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X_lsvc, y, test_size = 0.4, random_state = 0)
 
 # fitting logistic regression to Training Set
 from sklearn.linear_model import LogisticRegression
