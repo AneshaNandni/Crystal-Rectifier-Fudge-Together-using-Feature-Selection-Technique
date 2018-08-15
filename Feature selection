@@ -4,11 +4,11 @@ import pandas as pd
 # importing dataset
 
 # create matrix of independent variables(features)
-data_X = pd.read_csv('c\secom.data.txt')
+data_X = pd.read_csv('C:\secom.data.txt')
 X = data_X.values
 
 #create dependent variable vector
-data_y = pd.read_csv('c\secom_labels.data.txt')
+data_y = pd.read_csv('C:\secom_labels.data.txt')
 y = data_y.iloc[:, 0].values
 data_y.head()
 
